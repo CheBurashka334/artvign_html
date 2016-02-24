@@ -1,0 +1,16 @@
+// breadcrumbs
+.breadcrumbs {
+	font-size: 13px;
+	@extend .light;
+	margin: 2em 0 1em;
+	.brdcmb-link {
+		@extend a.nostyle;
+		color: #939393;
+		&:hover {
+			color: #6a6a6a;
+		}
+	}
+	.brdcmb-curpage	{
+		color: $base-text-color;
+	}
+}

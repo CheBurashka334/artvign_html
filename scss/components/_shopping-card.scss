@@ -1,0 +1,40 @@
+// shopping-card
+.shopping-card-box {
+	.btn-minicart {
+		padding-left: $gutter-width*3;
+		text-align: left;
+		&.col.l2 {
+			max-width: 180px;
+		}
+		.icon {
+			position: absolute;
+			left: 15px;
+			fill: color('icons', 'dark');
+		}
+	}
+	.btn-favorite {
+		margin: $gutter-width/2 6.7% $gutter-width/2 20%;
+		padding: 0;
+		.icon {
+			fill: color('icons', 'lightest');
+		}
+	}
+	.notification {
+		position: absolute;
+		top: 5px;
+		left: 30px;
+		width: 14px;
+		height: 14px;
+		font-size: 9px;
+		font-weight: 600;
+		line-height: 14px;
+		background: color('primary', 'base');
+		color: white;
+		border-radius: $circle-border-radius;
+		text-align: center;
+		vertical-align: middle;
+		&:empty {
+			display: none;
+		}
+	}
+}

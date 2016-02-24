@@ -1,0 +1,287 @@
+// flex-container
+.grid {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	display: flex;
+	
+	// wrap
+	flex-wrap: wrap; // default
+	&.nowrap {
+		flex-wrap: nowrap;
+	}
+	
+	// direction
+	flex-direction: row; // default
+	&.column {
+		flex-direction: column;
+	}
+	
+	// justify
+	justify-content: flex-start; // default
+	&.justify-center {
+		justify-content: center;
+	}
+	&.justify-end {
+		justify-content: flex-end;
+	}
+	&.justify-space-between {
+		justify-content: space-between;
+	}
+	&.justify-space-around {
+		justify-content: space-around;
+	}
+	
+	// align
+	align-items: flex-start; // default
+	align-content: flex-start; // default
+	&.align-center {
+		align-items: center;
+		align-content: center;
+	}
+	&.align-end {
+		align-items: flex-end;
+		align-content: flex-end;
+	}
+	&.align-stretch {
+		align-items: stretch;
+		align-content: stretch;
+	}
+}
+// flex-box
+.box {
+	box-sizing: border-box;
+	margin: $gutter-width / 2;
+	.collapse-h &,
+	.collapse & {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	// order
+	order: 0; // default
+	&.order-first {
+		order: -1;
+	}
+	&.order-last {
+		order: 9;
+	}
+	
+	// align-self
+	&.self-center {
+		align-self: center;
+	}
+	&.self-end {
+		align-self: flex-end;
+	}
+	&.self-stretch {
+		align-self: stretch;
+	}
+
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote(((100 / ($num-cols / $i)) - (100 / (($num-cols - 1) / ($i - 1)))) + "%");
+		$perc-collapse: unquote((100 / ($num-cols / $i)) + "%");
+		&.s#{$i} {
+			width: $perc;
+		}
+		.collapse-g &.s#{$i},
+		.collapse &.s#{$i}{
+			width: $perc-collapse;
+		}
+		$i: $i + 1;
+	}
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote(((100 / ($num-cols / $i)) - (100 / (($num-cols - 1) / ($i - 1)))) + "%");
+		$perc-collapse: unquote((100 / ($num-cols / $i)) + "%");
+		&.offset-s#{$i} {
+			margin-left: $perc;
+		}
+		.collapse-g &.offset-s#{$i},
+		.collapse &.offset-s#{$i}{
+			width: $perc-collapse;
+		}
+		$i: $i + 1;
+	}
+	
+	@media #{$small-only} {
+		@while $i <= $num-cols {
+			@for $c from 1 to $num-cols {
+				&.s#{$i} .s#{$c}{
+					width: 100% / ($i - 1) * $c;
+				}
+			}
+			$i: $i + 1;
+		}
+		// s-order
+		&.s-order-first {
+			order: -1;
+		}
+		&.s-order-last {
+			order: 9;
+		}
+		// s-align-self
+		&.s-self-center {
+			align-self: center;
+		}
+		&.s-self-end {
+			align-self: flex-end;
+		}
+		&.s-self-stretch {
+			align-self: stretch;
+		}
+	}
+
+	@media #{$medium-and-up} {
+
+		$i: 1;
+		@while $i <= $num-cols {
+			$perc: unquote(((100 / ($num-cols / $i)) - (100 / (($num-cols - 1) / ($i - 1)))) + "%");
+			$perc-collapse: unquote((100 / ($num-cols / $i)) + "%");
+			&.m#{$i} {
+				width: $perc;
+				margin-left: 0;
+			}
+			.collapse-g &.m#{$i},
+			.collapse &.m#{$i}{
+				width: $perc-collapse;
+			}
+			@for $c from 1 to $num-cols {
+				&.m#{$i} .m#{$c}{
+					width: 100% / $i * $c;
+				}
+			}
+			$i: $i + 1;
+		}
+		$i: 1;
+		@while $i <= $num-cols {
+			$perc: unquote(((100 / ($num-cols / $i)) - (100 / (($num-cols - 1) / ($i - 1)))) + "%");
+			$perc-collapse: unquote((100 / ($num-cols / $i)) + "%");
+			&.offset-m#{$i} {
+				margin-left: $perc;
+			}
+			.collapse-g &.offset-m#{$i},
+			.collapse &.offset-m#{$i}{
+				width: $perc-collapse;
+			}
+			$i: $i + 1;
+		}
+
+		&.l2-5, &.m2-5 {
+			width: 50%;
+		}
+		
+		// m-order
+		&.m-order-first {
+			order: -1;
+		}
+		&.m-order-last {
+			order: 9;
+		}
+		// m-align-self
+		&.m-self-center {
+			align-self: center;
+		}
+		&.m-self-end {
+			align-self: flex-end;
+		}
+		&.m-self-stretch {
+			align-self: stretch;
+		}
+	}
+
+	@media #{$large-and-up} {
+
+		$i: 1;
+		@while $i <= $num-cols {
+			$perc: unquote(((100 / ($num-cols / $i)) - (100 / (($num-cols - 1) / ($i - 1)))) + "%");
+			$perc-collapse: unquote((100 / ($num-cols / $i)) + "%");
+			&.l#{$i} {
+				width: $perc;
+				margin-left: 0;
+			}
+			.collapse-g &.l#{$i},
+			.collapse &.l#{$i}{
+				width: $perc-collapse;
+			}
+			@for $c from 1 to $num-cols {
+				&.l#{$i} .l#{$c}{
+					width: 100% / $i * $c;
+				}
+			}
+			$i: $i + 1;
+		}
+		$i: 1;
+		@while $i <= $num-cols {
+			$perc: unquote(((100 / ($num-cols / $i)) - (100 / (($num-cols - 1) / ($i - 1)))) + "%");
+			$perc-collapse: unquote((100 / ($num-cols / $i)) + "%");
+			&.offset-l#{$i} {
+				margin-left: $perc;
+			}
+			.collapse-g &.offset-l#{$i},
+			.collapse &.offset-l#{$i}{
+				width: $perc-collapse;
+			}
+			$i: $i + 1;
+		}
+		
+		// l-order
+		&.l-order-first {
+			order: -1;
+		}
+		&.l-order-last {
+			order: 9;
+		}
+		// l-align-self
+		&.l-self-center {
+			align-self: center;
+		}
+		&.l-self-end {
+			align-self: flex-end;
+		}
+		&.l-self-stretch {
+			align-self: stretch;
+		}
+	}
+	&.center {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+// fullscreen width inside .container
+.full-width {
+	width: 100vw;
+	margin-left: calc(-1*(100vw - 100%)/2);
+}
+
+.s-full-width {
+	@media #{$small-and-down} {
+		width: 100vw;
+		margin-left: calc(-1*(100vw - 100%)/2);
+		.col {
+			padding-left: $gutter-width*2;
+			padding-right: $gutter-width*2;
+			float: none;
+			margin: 0;
+		}
+	}
+}
+.m-full-width {
+	@media #{$medium-only} {
+		width: 100vw;
+		margin-left: calc(-1*(100vw - 100%)/2);
+	}
+}
+.l-full-width {
+	@media #{$large-and-up} {
+		width: 100vw;
+		margin-left: calc(-1*(100vw - 100%)/2);
+	}
+}

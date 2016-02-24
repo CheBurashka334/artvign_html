@@ -1,0 +1,64 @@
+// Pagination
+.pagination-box {
+	margin: $gutter-width*1.5 auto $gutter-width*2.75;
+	text-align: center;
+}
+.pagination {
+	@extend ul.nostyle;
+	text-align: center;
+	.pagin-item {
+		display: inline-block;
+		text-align: center;
+		margin: 0;
+		vertical-align: middle;
+
+		.pagin-link {
+			display: block;
+			width: $gutter-width*1.5;
+			height: $gutter-width*1.5;
+			line-height: $gutter-width*1.5;
+			font-size: $base-text-size;
+			vertical-align: middle;
+			background: transparent;
+			color: $base-text-color;
+			&.prev,
+			&.next {
+				padding: 10px;
+				cursor: pointer;
+			}
+			&.next {
+				transform: rotate(180deg);
+			}
+			.icon {
+				fill: $base-text-color;
+			}
+			&:hover {
+				background-color: $violet;
+				color: white;
+				.icon {
+					fill: white;
+				}
+			}
+			&.active { 
+				color: white; 
+				background-color: $pink;
+				.icon {
+					fill: white;
+				}
+			}
+		}
+
+		&.disabled .pagin-link {
+			cursor: default;
+			color: #999;
+			.icon {
+				fill: #999;
+			}
+		}
+		&.more .pagin-link:hover {
+			background: transparent;
+			color: $base-text-color;
+			cursor: default;
+		}
+	}
+}

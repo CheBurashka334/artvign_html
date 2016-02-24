@@ -1,0 +1,43 @@
+// balloon
+.balloon {
+	@extend .base-card;
+	@extend .z-depth-2;
+	box-sizing: border-box;
+	width: 340px;
+	max-width: 96vw;
+	line-height: 1.5;
+	ymaps {
+		width: 100%;
+	}
+	.btn-close {
+		position: absolute;
+		top: $gutter-width/2;
+		right: $gutter-width/2;
+	}
+	.balloon-header,
+	.balloon-content {
+		width: 100%;
+		padding: $gutter-width*0.75 0;
+	}
+	.balloon-header {
+		border-bottom: 1px solid color('border', 'light');
+	}
+	.title {
+		margin: 0 0 1em;
+	}
+	.phone {
+		margin-top: $gutter-width/4;
+	}
+	.address {
+		margin-bottom: $gutter-width/2;
+	}
+	.balloon-tngl {
+		width: 25px;
+		height: 16px;
+		position: absolute;
+		background: url('images/tooltip-tngl.png') center no-repeat;
+		bottom: -16px;
+		left: 30px;
+		transform: rotate(180deg);
+	}
+}

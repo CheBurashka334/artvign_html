@@ -1,0 +1,22 @@
+.soc-list {
+	margin: 0;
+	padding: 0;
+}
+.soc-item {
+	margin: 0 2px;
+}
+.soc-link {
+	display: block;
+	width: 23px;
+	height: 23px;
+	padding: 5px;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
+	transition: border-color .3s ease;
+	.icon {
+		fill: #7f807d;
+	}
+	&:hover {
+		border-color: #7f807d;
+	}
+}

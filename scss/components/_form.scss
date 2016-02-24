@@ -1,0 +1,355 @@
+// fields
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+.inputtext,
+textarea {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #e1e1e1;
+	padding: 10px 15px;
+	font-family: inherit;
+	font-size: 15px;
+	line-height: 19px;
+	color: color('text', 'darker');
+	margin: 5px 0;
+	
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	
+	& + .textfield-placeholder {
+		@extend .small-text;
+		line-height: 20px;
+		color: color('text', 'light');
+		position: absolute;
+		top: $gutter-width/2;
+		left: 15px;
+		cursor: text;
+		opacity: 1;
+		will-change: opacity, transform;
+		transform: translate(0,0);
+		transition: transform .1s, opacity .1s;
+	}
+	
+	&.inputtext-small {
+		max-width: 100px;
+		font-size: $base-text-size;
+		line-height: 1em;
+		padding: 7px 15px;
+		height: 30px;
+		border-radius: $small-border-radius;
+		& + .textfield-placeholder {
+			font-size: $base-text-size;
+			line-height: 1em;
+			top: 9px;
+		}
+	}
+	
+	&:focus {
+		outline: none;
+	}
+	&.dirty + .textfield-placeholder {
+		//display: none;
+		opacity: 0;
+		transform: translate(50px,0);
+	}
+	&[class*='invalid-']{
+		border-color: #e23358;
+		background: url('images/error.png') right center no-repeat;
+	}
+	&.invalid-required ~ .error-required,
+	&.invalid-pattern ~ .error-pattern {
+		height: 1.5em;
+	}
+}
+.error-text {
+	display: block;
+	height: 0;
+	overflow: hidden;
+	font-size: 12px;
+	font-weight: lighter;
+	margin-top: 3px;
+	color: #e23358;
+	transition: height .3s ease;
+}
+textarea {
+	max-width: 100%;
+	min-height: 130px;
+}
+
+label {
+	font-size: 13px;
+	color: #939393;
+	font-weight: lighter;
+	.required &:after {
+		content: ' *';
+		color: #202020;
+	}
+}
+
+.field {
+	margin-bottom: $gutter-width;
+	&[class*="col-"],
+	&.col {
+		padding-bottom: 0;
+	}
+}
+
+// checkbox
+input[type="checkbox"] {
+	display: none;
+	& + .checkbox-lbl {
+		font-size: $base-text-size;
+		color: #202020;
+		font-weight: lighter;
+		line-height: 1;
+		vertical-align: middle;
+		cursor: pointer;
+		will-change: color;
+		transition: color .3s ease;
+		user-select: none;
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			border: 1px solid #282828;
+			margin-right: 9px;
+			background-color: white;
+			vertical-align: bottom;
+		}
+	}
+	&:checked + .checkbox-lbl:before {
+		background: white url('images/tick.png') center no-repeat;
+	}
+	&:disabled + .checkbox-lbl {
+		color: #939393;
+		cursor: default;
+	}
+}
+
+// radio
+input[type="radio"] {
+	display: none;
+	& + .radio-lbl {
+		font-size: $base-text-size;
+		color: $base-text-color;
+		display: inline-block;
+		//margin-right: $gutter-width*3;
+		line-height: 1;
+		vertical-align: middle;
+		cursor: pointer;
+		user-select: none;
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			border: 1px solid #e1e1e1;
+			border-radius: $circle-border-radius;
+			margin-right: 9px;
+			background-color: white;
+			padding: 3px;
+			box-sizing: border-box;
+			background-clip: content-box;
+			vertical-align: top;
+		}
+	}
+	&:checked + .radio-lbl:before {
+		background-color: $violet;
+	}
+}
+
+// select
+select {
+	box-sizing: border-box;
+	border: 1px solid color('border', 'light');
+	border-radius: $small-border-radius;
+	padding: 0 15px;
+	font-family: inherit;
+	line-height: 38px;
+	height: 40px;
+	vertical-align: baseline;
+	cursor: pointer;
+	option {
+		max-width: 100%;
+		color: $base-text-color;
+	}
+}
+.select-box select {
+	width: 100%;
+}
+.triangle {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 30px;
+	height: 38px;
+	background: #fff;
+	font-size: 15px;
+	border-radius: $small-border-radius;
+	&:after {
+		content: '>';
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		color: color('text', 'light');
+		font-weight: 100;
+		transform: rotate(90deg) scale(1,2);
+	}
+}
+
+// quantity-field
+.product-quantity-box {
+	display: flex;
+	.product-card & {
+		position: absolute;
+		top: 0;
+		right: 0;
+		opacity: 0;
+		transition: transform .3s ease, opacity .3s ease;
+		transform: scaleX(0) translateX(100%);
+		transform-origin: right center;
+	}
+	.product-actions.active & {
+		opacity: 1;
+		transform: scaleX(1) translateX(0);
+	}
+	
+	.icon {
+		fill: white;
+	}
+	.btn-plus,
+	.btn-minus {
+		background: #939393;
+		&:hover {
+			background: $violet;
+		}
+		.product-card & {
+			background: $violet;
+			&:hover {
+				background: $pink;
+			}
+		}
+	}
+	.btn-plus,
+	.btn-minus,
+	.input-quantity {
+		width: 41px;
+		height: 41px;
+		color: white;
+		border: 1px solid transparent;
+		transition: all .3s ease;
+		&:hover {
+			border-color: transparent;
+			z-index: 2;
+		}
+	}
+	.btn-plus,
+	.input-quantity {
+		border-left-color: rgba(255,255,255,.18);
+	}
+	.btn-minus,
+	.input-quantity {
+		border-right-color: rgba(255,255,255,.18);
+	}
+	.input-quantity {
+		padding: 10px 5px;
+		text-align: center;
+		margin: 0 -1px;
+		background: white;
+		color: #202020;
+		.product-card & {
+			background: $violet;
+			color: white;
+		}
+	}
+	.basket-box & {
+		width: 100px;
+		margin: 0 auto;
+		.btn-plus,
+		.btn-minus {
+			width: 31px;
+			height: 31px;
+			padding: 7px;
+		}
+		.input-quantity {
+			width: 39px;
+			height: 31px;
+			border-color: #e1e1e1;
+		}
+	}
+}
+
+// inputfile
+.inputfile-box,
+.field.inputfile-box {
+	margin: $gutter-width/2 0;
+}
+.inputfile-box {
+	input[type="file"]{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		opacity: 0;
+		cursor: pointer;
+	}
+	.inputfile {
+		display: inline-block;
+		margin-bottom: $gutter-width;
+		font-size: 15px;
+		line-height: 39px;
+		vertical-align: middle;
+		max-width: 100%;
+	}
+	.inputfile-value {
+		display: none;
+		height: 100%;
+		background: color('bg', 'base');
+		padding: 0 2*$gutter-width 0 1.5*$gutter-width;
+		margin-right: $gutter-width;
+		vertical-align: middle;
+		min-width: 200px;
+		max-width: 62%;
+		max-width: calc(100% - 190px);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		&.shown {
+			display: inline-block;
+		}
+	}
+	.btn-delete {
+		position: absolute;
+		top: 13px;
+		right: 13px;
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+		z-index: 3;
+		will-change: transform;
+		transition: transform .3s ease;
+		.icon {
+			fill: color('primary', 'base');
+		}
+		&:hover {
+			transform: rotate(90deg);
+		}
+	}
+	.btn-inputfile {
+		padding: 0 2em;
+	}
+	.note-text {
+		display: block;
+		vertical-align: middle;
+	}
+}

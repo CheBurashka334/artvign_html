@@ -1,0 +1,246 @@
+html{
+	font-family: 'open sans', roboto, arial, sans-serif;
+	line-height: 1.5;
+	font-size: 15px;
+	font-weight: normal;
+	color: $base-text-color;
+	-webkit-font-smoothing: antialiased;
+}
+.rouble {
+	font-family: rouble, sans-serif;
+	font-style: normal;
+}
+.cond {
+	font-family: 'open sans condensed', 'open sans', roboto, arial, sans-serif;
+}
+// Text Styles
+em { 
+	font-style: italic; 
+}
+.uppercase {
+	text-transform: uppercase;
+}
+// wight
+.light { 
+	font-weight: 300; 
+}
+strong, .medium { 
+	font-weight: 600; 
+}
+.bold {
+	font-weight: 800;
+}
+// color
+.lighter-color {
+	color: color('text', 'lighter');
+}	
+.light-color {
+	color: #9c9c9c;
+}
+.dark-color {
+	color: color('text', 'dark');
+}
+.darker-color {
+	color: color('text', 'darker');
+}
+.violet-color {
+	color: $violet;
+}
+.pink-color {
+	color: $pink;
+}
+// size
+small { 
+	font-size: 75%; 
+}
+.xsmall-text {
+	font-size: 10px;
+}
+.small-text {
+	font-size: 12px;
+}
+.medium-text {
+	font-size: 16px;
+}
+.big-text {
+	font-size: 18px;
+}
+.xbig-text {
+	font-size: 26px;
+}
+.xxbig-text {
+	font-size: 30px;
+}
+.large-text {
+	font-size: 30px;
+}
+ul {
+	list-style-type: disc;
+}
+ul, ol {
+	padding: 0;
+	padding-left: $gutter-width;
+	margin: $gutter-width*1.25 0;
+	li {
+		margin: $gutter-width/2 0;
+	}
+	&.type-2 > li {
+		margin: $gutter-width 0;
+	}
+	&.nostyle {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		> li {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	&.horizontal > li {
+		display: inline-block;
+	}
+}
+dl {
+	margin: $gutter-width*1.25 0;
+	padding: 0;
+	dt, dd {
+		padding: 0;
+		margin: 0;
+	}
+	&.params-list {
+		padding-left: $gutter-width/2;
+		border-left: 2px solid #939393;
+		font-size: 13px;
+		dt, dd {
+			display: inline-block;
+		}
+		dt {
+			color: #939393;
+			margin: 0.5rem 0;
+			&:first-of-type {
+				margin-top: 0;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	// Gets rid of tap active state
+	-webkit-tap-highlight-color: transparent;
+	
+	&.nostyle {
+		color: inherit;
+	}
+	&.img-link {
+		display: block;
+		border: 0;
+		img {
+			display: block;
+		}
+	}
+	[class*="title"] & {
+		color: inherit;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	line-height: 1.5;
+	a {
+		color: inherit;
+	}
+}
+
+// Header Styles
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+//h1 { font-size: $h1-fontsize; line-height: 1.5; margin: 1em 0;}
+//h2 { font-size: $h2-fontsize; line-height: 1.5; margin: 1em 0;}
+h3 { font-size: $h3-fontsize; line-height: 1.5; margin: 1em 0;}
+h4 { font-size: $h4-fontsize; line-height: 1.5; margin: 1em 0;}
+h5 { font-size: $h5-fontsize; line-height: 1.5; margin: 1em 0;}
+h6 { font-size: $h6-fontsize; line-height: 1.5; margin: 1em 0;}
+
+.page-title, h1 {
+	@extend .large-text;
+	@extend .bold;
+	@extend .cond;
+	margin: 0.5em 0 1em;
+	& + .archive-box {
+		margin: $gutter-width*1.5 0;
+		line-height: 51px;
+		vertical-align: middle;
+	}
+}
+.page-title-link {
+	margin-top: $gutter-width*1.5;
+}
+.page-img {
+	margin: $gutter-width auto;
+}
+.page-text {
+	margin-bottom: $gutter-width*7.5;
+}
+.breadcrumbs + .workarea .page-title {
+	margin: $gutter-width/2 0 $gutter-width*0.75;
+}
+.box-title {
+	@extend .light;
+	font-size: 28px;
+	margin: $gutter-width 0;
+}
+h2, .title-h2 {
+	font-size: 20px;
+	@extend .bold;
+	@extend .cond;
+	margin: 1em 0;
+	p + & {
+		margin-top: 1.5em;
+	}
+}
+
+//  Blockquote
+blockquote {
+  margin: $gutter-width*1.75 0;
+  padding: $gutter-width 0 $gutter-width 2rem;
+  border-left: 1px solid $primary-color;
+}
+
+// tables
+table {
+	border-collapse: collapse;
+	th {
+		font-weight: normal;
+		text-align: center;
+	}
+	th, td {
+		padding: 1em 2em;
+	}
+	&.bordered {
+		th, td {
+			text-align: left;
+			padding: 1em;
+			border: 1px solid #e1e1e1;
+			&:first-of-type {
+				border-left: 0;
+				padding-left: 0;
+			}
+			&:last-of-type {
+				border-right: 0;
+				padding-left: 2.5em;
+			}
+		}
+		th {
+			border-top: 0;
+		}
+		tr:last-of-type td {
+			border-bottom: 0;
+		}
+	}
+}

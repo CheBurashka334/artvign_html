@@ -1,0 +1,91 @@
+// modal 
+.dark-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9998;
+	background: rgba(76,74,75,.15);
+	display: none;
+}
+.modal {
+	@extend .base-card;
+	position: absolute;
+	display: none;
+	z-index: 9999;
+	.btn-close {
+		position: absolute;
+		top: $gutter-width/2;
+		right: $gutter-width/2;
+	}
+}
+.modal.one-click-form-box {
+	top: 235px;
+	left: 50%;
+	width: 500px;
+	max-width: 100%;
+	margin-left: -250px;
+	padding: $gutter-width*2;
+	.title {
+		font-size: 24px;
+		margin-bottom: $gutter-width*1.5;
+		@extend .light;
+	}
+	.note-text {
+		margin-bottom: $gutter-width;
+	}
+	.table-field {
+		margin: $gutter-width/2 0 $gutter-width*1.25;
+		.label {
+			@extend .medium-text;
+			width: 24%;
+		}
+		.field {
+			width: 73%;
+			width: calc(76% - 10px);
+		}
+	}
+	.table-field.time-field {
+		flex-wrap: wrap;
+		margin-top: $gutter-width*1.5;
+		.label {
+			width: 100%;
+			display: block;
+			font-size: 1em;
+			margin-bottom: 1em;
+		}
+		.first-field {
+			width: 44%;
+		}
+		.field {
+			width: 53%;
+		}
+		.radio-lbl {
+			@extend .medium-text;
+		}
+	}
+}
+.modal.notification {
+	padding: $gutter-width*2;
+	&.compare-full {
+		top: $gutter-width*5;
+		left: 50%;
+		width: 354px;
+		max-width: 96vw;
+		margin-left: -177px;
+	}
+}
+.modal.geo-modal {
+	width: 500px;
+	min-height: 490px;
+	top: 20vh;
+	left: 50%;
+	margin-left: -250px;
+	padding: $gutter-width*2;
+	.title {
+		@extend .light;
+		font-size: 24px;
+		margin: 0 0 $gutter-width*4;
+	}
+}

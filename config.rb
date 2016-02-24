@@ -1,0 +1,11 @@
+http_path = "/"
+css_dir = "/"
+sass_dir = "scss"
+images_dir = "images"
+javascripts_dir = "js"
+fonts_dir = "fonts"
+line_comment = true
+output_style = :expanded
+autoprefixer = true
+autocompile = true
+preferred_syntax = :scss
