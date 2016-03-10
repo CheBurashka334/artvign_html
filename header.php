@@ -19,6 +19,7 @@
 	<script src="js/jquery.jcarousel.min.js"></script>
 	<script src="js/svg-lib.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/effects.js"></script>
 	<link rel="stylesheet" type="text/css" href="template_styles.css" />
 </head>
 <body ng-app="artvision">

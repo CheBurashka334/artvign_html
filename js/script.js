@@ -147,7 +147,7 @@ $(document).ready(function(){
 	// jcarousel
 	// http://sorgalla.com/jcarousel/docs/
 	$('.carousel')
-		.on('jcarousel:createend jcarousel:reloadend', function(e, carousel){
+		.on('jcarousel:createend', function(e, carousel){
 			width = $(this).innerWidth();
 			if($(this).attr('data-target') > 1){
 				width = width / $(this).attr('data-target');

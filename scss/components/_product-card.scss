@@ -30,6 +30,25 @@
 	.product-info {
 		padding: 1em 1.2em $gutter-width/2;
 	}
+	&.hit:after,
+	&.new:after,
+	&.sale:after{
+		content: '';
+		width: 41px;
+		height: 20px;
+		position: absolute;
+		top: 10px;
+		background: url('images/label/sprite-label.png') no-repeat;
+	}
+	&.new:after{
+		background-position: 0px -40px;
+	}
+	&.hit:after{
+		background-position: 0px 0px;
+	}
+	&.sale:after{
+		background-position: 0px -20px;
+	}
 	
 	.product-name {
 		line-height: 20px;

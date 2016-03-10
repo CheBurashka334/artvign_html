@@ -8,57 +8,64 @@
 </div>
 <div class="product-page grid">
 	<div class="product-imgs col-6">
-		<div class="full-img"><img src="images/products/product-full.jpg"/></div>
-		<div class="carousel carousel-thumbs" data-target="4">
-			<div class="carousel-inner">
-				<div class="carousel-item">
-					<!-- ссылка на большое изображение -->
-					<a class="item thumb-link img-link active" href="images/products/product-full.jpg">
-						<!-- миниатюра -->
-						<img class="thumb-img" src="images/products/love.jpg"/>
-					</a>
-				</div>
-				<div class="carousel-item">
-					<a class="item thumb-link img-link" href="images/products/product-full.jpg">
-						<img class="thumb-img" src="images/products/love.jpg"/>
-					</a>
-				</div>
-				<div class="carousel-item">
-					<a class="item thumb-link img-link" href="images/products/product-full.jpg">
-						<img class="thumb-img" src="images/products/love.jpg"/>
-					</a>
-				</div>
-				<div class="carousel-item">
-					<a class="item thumb-link img-link" href="images/products/product-full.jpg">
-						<img class="thumb-img" src="images/products/love.jpg"/>
-					</a>
-				</div>
-				<div class="carousel-item">
-					<a class="item thumb-link img-link" href="images/products/product-full.jpg">
-						<img class="thumb-img" src="images/products/love.jpg"/>
-					</a>
-				</div>
-				<div class="carousel-item">
-					<a class="item thumb-link img-link" href="images/products/product-full.jpg">
-						<img class="thumb-img" src="images/products/love.jpg"/>
-					</a>
+		<div class="full-img">
+			<img src="images/products/product-full.jpg"/>
+			<div class="zoom"><svg class="icon"><use xlink:href="#zoom"/></svg></div>
+		</div>
+		<div class="items">
+			<div class="carousel carousel-thumbs" data-target="4">
+					<div class="carousel-inner">
+						<div class="carousel-item">
+							<!-- ссылка на большое изображение -->
+							<a class="item thumb-link img-link active" href="images/products/product-full.jpg">
+								<!-- миниатюра -->
+								<img class="thumb-img" src="images/products/love.jpg" width="70"/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a class="item thumb-link img-link" href="images/products/product-full.jpg">
+								<img class="thumb-img" src="images/products/love.jpg" width="70"/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a class="item thumb-link img-link" href="images/products/product-full.jpg">
+								<img class="thumb-img" src="images/products/love.jpg" width="70"/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a class="item thumb-link img-link" href="images/products/product-full.jpg">
+								<img class="thumb-img" src="images/products/love.jpg" width="70"/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a class="item thumb-link img-link" href="images/products/product-full.jpg">
+								<img class="thumb-img" src="images/products/love.jpg" width="70"/>
+							</a>
+						</div>
+						<div class="carousel-item">
+							<a class="item thumb-link img-link" href="images/products/product-full.jpg">
+								<img class="thumb-img" src="images/products/love.jpg" width="70"/>
+							</a>
+						</div>
 				</div>
 			</div>
 			<div class="carousel-controlls">
-				<button class="carousel-prev"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
-				<button class="carousel-next"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
+					<button class="carousel-prev"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
+					<button class="carousel-next"><svg class="icon"><use xlink:href="#arrow"/></svg></button>
 			</div>
 		</div>
 	</div>
 	<div class="product-info col-6">
-		<h1 class="product-title large-text">Лоток-накопитель</h1>
+		<?/*add class new, sale or hits*/?>
+			<h1 class="product-title large-text hit">Лоток-накопитель</h1>
+		<?/*******/?>
 		<div class="articul violet-color">Артикул: 2585-56</div>
 		<div class="series light-color">Серия «Голландский»</div>
 		<div class="product-price-box">
-			<div class="price old-price light-color">125&nbsp;&#8381;</div>
-			<div class="price product-optprice bold">100&nbsp;&#8381;</div>
-			<div class="price old-price light-color">150&nbsp;&#8381;</div>
-			<div class="price product-price">120&nbsp;&#8381; <span class="xsmall-text note-text">розн. цена</span></div>
+			<div class="price old-price light-color">125&nbsp;<span class="ruble">a</span></div>
+			<div class="price product-optprice bold">100&nbsp;<span class="ruble">c</span></div>
+			<div class="price old-price light-color">150&nbsp;<span class="ruble">a</span></div>
+			<div class="price product-price">120&nbsp;<span class="ruble">a</span> <span class="xsmall-text note-text">розн. цена</span></div>
 		</div>
 		<div class="action-box grid-noGutter-spaceAround">
 			<div class="product-quantity-box">
@@ -87,7 +94,7 @@
 </div>
 <div class="relative-products grid-column" ng-controller="productsCtrl">
 	<div class="box-title title-h2 col">Похожие товары</div>
-	<div class="carousel products-carousel col" data-target="4">
+	<div class="carousel products-carousel col" data-target="4" data-wrap="circular">
 		<div class="carousel-inner">
 			<div class="col-3 tile carousel-item" ng-repeat="product in products">
 				<div class="card product-card">
@@ -99,8 +106,8 @@
 						<div class="card-title product-name"><a class="item-link center-align" href="product__single.php">{{product.name}}</a></div>
 						<div class="product-articul xsmall-text violet-color">{{product.articul}}</div>
 						<div class="grid-noGutter product-price-box">
-							<div class="product-optprice bold">{{product.optprice}} &#8381;</div>
-							<div class="product-price">{{product.price}} &#8381;<div class="xsmall-text note-text">розн. цена</div></div>
+							<div class="product-optprice bold">{{product.optprice}} <span class="ruble">c</span></div>
+							<div class="product-price">{{product.price}} <span class="ruble">a</span><div class="xsmall-text note-text">розн. цена</div></div>
 							<div class="product-actions">
 								<button class="btn js-add-to-cart btn-add-to-cart square primary"><svg class="icon"><use xlink:href="#cart"/></svg></button>
 								<div class="product-quantity-box">

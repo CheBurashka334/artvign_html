@@ -5,19 +5,20 @@
 		display: none;
 	}
 	.collapsible-body-content {
-		padding: 1px $gutter-width $gutter-width/2;
+		/*padding: 1px $gutter-width $gutter-width/2;*/
 		@extend .clearfix;
-		>*:first-child {
+		/*>*:first-child {
 			margin-top: 0.5rem;
-		}
+		}*/
 	}
 	ul.collapsible-body-content {
 		@extend ul.nostyle;
 	}
 	&.sidebar-menu >.menu-item > .menu-link,
 	.collapsible-header {
-		padding: $gutter-width*0.9 $gutter-width $gutter-width*0.8;
-		@extend .medium-text;
+		/*padding: $gutter-width*0.9 $gutter-width $gutter-width*0.8;*/
+		padding: 18px 15px 18px 10px;
+		@extend .xmedium-text;
 		line-height: 1;
 		cursor: pointer;
 		min-height: 50px;
@@ -27,9 +28,9 @@
 			content: '>';
 			display: block;
 			position: absolute;
-			right: 22px;
+			right: 15px;
 			top: $gutter-width*0.9;
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 1;
 			color: color('icons', 'base');
 			transform: scale(2,1) rotate(90deg) translateZ(0);
@@ -40,11 +41,22 @@
 			background-color: color('bg', 'light');
 		}
 		&.active {
+			background: $pink;
+			color: #ffffff;
 			&:after {
 				transform: scale(2,1) rotate(-90deg) translateZ(0);
 			}
 			& + .collapsible-body {
 				//display: block;
+			}
+		}
+	}
+	&.level-2{
+		.collapsible-header {
+			padding-left: 20px;
+			&.active{
+				background: $gray;
+				color: #ffffff;
 			}
 		}
 	}

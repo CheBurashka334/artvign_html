@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*** Colors ***/
 /*** Cards ***/
 /*** Collapsible ***/
@@ -2321,7 +2322,6 @@ html, body {
 .workarea {
   padding-top: 90px;
   min-height: calc(100vh - 70px);
-  margin-bottom: 200px;
 }
 
 /* line 119, scss/_layout.scss */
@@ -2367,7 +2367,7 @@ html {
 }
 
 /* line 40, scss/components/_global.scss */
-.z-depth-1, .filter, .product-card:hover {
+.z-depth-1, .left-block, .product-card:hover {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -2762,8 +2762,8 @@ table.nostyle td {
 
 /* line 372, scss/components/_global.scss */
 .icons-block {
-  margin-top: 20px;
-  margin-bottom: 120px;
+  margin-top: 20px
+  /*margin-bottom: $gutter-width*6;*/
 }
 /* line 375, scss/components/_global.scss */
 .icons-block .block-item {
@@ -2895,6 +2895,33 @@ table.nostyle td {
 .no-h-padding {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+/* line 483, scss/components/_global.scss */
+.dirty-snow {
+  background-color: #fafafa;
+  padding: 40px 0;
+}
+/* line 487, scss/components/_global.scss */
+.dirty-snow .grid-address .text {
+  margin-bottom: 50px;
+}
+/* line 490, scss/components/_global.scss */
+.dirty-snow .grid-address .title-h2 {
+  margin: 0;
+}
+/* line 493, scss/components/_global.scss */
+.dirty-snow .grid-address .address {
+  padding-left: 20px;
+  color: #e233a6;
+  background: url("images/svg-icons/geo.svg") no-repeat;
+  background-size: 16px 25px;
+}
+/* line 499, scss/components/_global.scss */
+.dirty-snow .grid-address .time {
+  padding-left: 30px;
+  background: url("images/svg-icons/time.svg") no-repeat;
+  background-size: 20px;
 }
 
 /* line 2, scss/components/_cards.scss */
@@ -3099,30 +3126,35 @@ table.nostyle td {
   line-height: 100%;
   margin-right: 10px;
 }
+/* line 121, scss/components/_buttons.scss */
+.btn.white {
+  background: transparent;
+  border: 1px solid #ffffff;
+}
 
-/* line 122, scss/components/_buttons.scss */
+/* line 126, scss/components/_buttons.scss */
 .icon {
   width: 100%;
   height: 100%;
   vertical-align: top;
 }
-/* line 126, scss/components/_buttons.scss */
+/* line 130, scss/components/_buttons.scss */
 .icon.violet {
   fill: #5e2670;
 }
-/* line 129, scss/components/_buttons.scss */
+/* line 133, scss/components/_buttons.scss */
 .icon.pink {
   fill: #c337a2;
 }
 
-/* line 133, scss/components/_buttons.scss */
+/* line 137, scss/components/_buttons.scss */
 .btn-menu {
   width: 40px;
   height: 40px;
   z-index: 19;
   left: 0;
 }
-/* line 138, scss/components/_buttons.scss */
+/* line 142, scss/components/_buttons.scss */
 .btn-menu .line {
   display: block;
   position: absolute;
@@ -3134,43 +3166,43 @@ table.nostyle td {
   -webkit-transition: -webkit-transform .3s ease;
           transition: transform .3s ease;
 }
-/* line 148, scss/components/_buttons.scss */
+/* line 152, scss/components/_buttons.scss */
 .btn-menu .top {
   -webkit-transform: translateY(-9px);
       -ms-transform: translateY(-9px);
           transform: translateY(-9px);
 }
-/* line 151, scss/components/_buttons.scss */
+/* line 155, scss/components/_buttons.scss */
 .btn-menu .bottom {
   -webkit-transform: translateY(9px);
       -ms-transform: translateY(9px);
           transform: translateY(9px);
 }
-/* line 155, scss/components/_buttons.scss */
+/* line 159, scss/components/_buttons.scss */
 .main-menu.active .btn-menu .top {
   -webkit-transform: translateY(0) rotate(45deg) scaleX(1.4142);
       -ms-transform: translateY(0) rotate(45deg) scaleX(1.4142);
           transform: translateY(0) rotate(45deg) scaleX(1.4142);
 }
-/* line 158, scss/components/_buttons.scss */
+/* line 162, scss/components/_buttons.scss */
 .main-menu.active .btn-menu .bottom {
   -webkit-transform: translateY(0) rotate(-45deg) scaleX(1.4142);
       -ms-transform: translateY(0) rotate(-45deg) scaleX(1.4142);
           transform: translateY(0) rotate(-45deg) scaleX(1.4142);
 }
-/* line 161, scss/components/_buttons.scss */
+/* line 165, scss/components/_buttons.scss */
 .main-menu.active .btn-menu .middle {
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
 }
 
-/* line 166, scss/components/_buttons.scss */
+/* line 170, scss/components/_buttons.scss */
 .btn-more {
   margin-top: 10px;
 }
 
-/* line 169, scss/components/_buttons.scss */
+/* line 173, scss/components/_buttons.scss */
 .btn-close {
   width: 17px;
   height: 17px;
@@ -3181,39 +3213,39 @@ table.nostyle td {
   -webkit-transition: -webkit-transform .3s ease;
           transition: transform .3s ease;
 }
-/* line 175, scss/components/_buttons.scss */
+/* line 179, scss/components/_buttons.scss */
 .btn-close .icon {
   fill: color("primary", "base");
 }
-/* line 178, scss/components/_buttons.scss */
+/* line 182, scss/components/_buttons.scss */
 .btn-close:hover {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-/* line 182, scss/components/_buttons.scss */
+/* line 186, scss/components/_buttons.scss */
 .btn-delete-from-card {
   width: 30px;
   height: 30px;
 }
-/* line 185, scss/components/_buttons.scss */
+/* line 189, scss/components/_buttons.scss */
 .btn-delete-from-card .icon {
   fill: #939393;
 }
-/* line 189, scss/components/_buttons.scss */
+/* line 193, scss/components/_buttons.scss */
 .btn-delete-from-card:hover .icon {
   fill: #c337a2;
 }
 
-/* line 194, scss/components/_buttons.scss */
+/* line 198, scss/components/_buttons.scss */
 .btn-link {
   background: none;
   border: 0;
   padding: 0;
 }
 
-/* line 200, scss/components/_buttons.scss */
+/* line 204, scss/components/_buttons.scss */
 button.nostyle {
   appearance: none;
   margin: 0;
@@ -3223,9 +3255,26 @@ button.nostyle {
   outline: none;
   cursor: pointer;
 }
-/* line 208, scss/components/_buttons.scss */
+/* line 212, scss/components/_buttons.scss */
 button.nostyle:focus, button.nostyle:active {
   outline: none;
+}
+
+/* line 217, scss/components/_buttons.scss */
+.btn-effect {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0.6;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
 }
 
 /* line 1, scss/components/_typography.scss */
@@ -3245,7 +3294,7 @@ html {
 }
 
 /* line 13, scss/components/_typography.scss */
-.cond, .page-title, h1, h2, .title-h2 {
+.cond, .page-title, h1, h2, .title-h2, .modal.one-click-form-box .title {
   font-family: 'open sans condensed', 'open sans', roboto, arial, sans-serif;
 }
 
@@ -3260,7 +3309,7 @@ em {
 }
 
 /* line 24, scss/components/_typography.scss */
-.light, .box-title, .breadcrumbs, .modal.one-click-form-box .title, .modal.geo-modal .title {
+.light, .box-title, .breadcrumbs, .modal.geo-modal .title {
   font-weight: 300;
 }
 
@@ -3270,7 +3319,7 @@ strong, .medium, .tabs .tab-header-item .tab-link {
 }
 
 /* line 30, scss/components/_typography.scss */
-.bold, .page-title, h1, h2, .title-h2 {
+.bold, .page-title, h1, h2, .title-h2, .modal.one-click-form-box .title {
   font-weight: 800;
 }
 
@@ -3327,256 +3376,266 @@ textarea + .textfield-placeholder, .tabs .tab-header-item .tab-link {
 }
 
 /* line 62, scss/components/_typography.scss */
-.medium-text, .collapsible.sidebar-menu > .menu-item > .menu-link,
-.collapsible .collapsible-header, .vertical-menu, .delete-from-card-box .item-text, .modal.one-click-form-box .table-field .label, .modal.one-click-form-box .table-field.time-field .radio-lbl {
-  font-size: 16px;
+.xmedium-text, .collapsible.sidebar-menu > .menu-item > .menu-link,
+.collapsible .collapsible-header {
+  font-size: 14px;
 }
 
 /* line 65, scss/components/_typography.scss */
+.medium-text, .vertical-menu, .delete-from-card-box .item-text, .modal.one-click-form-box .table-field .label, .modal.one-click-form-box .table-field.time-field .radio-lbl {
+  font-size: 16px;
+}
+
+/* line 68, scss/components/_typography.scss */
 .big-text {
   font-size: 18px;
 }
 
-/* line 68, scss/components/_typography.scss */
+/* line 71, scss/components/_typography.scss */
 .xbig-text {
   font-size: 26px;
 }
 
-/* line 71, scss/components/_typography.scss */
+/* line 74, scss/components/_typography.scss */
 .xxbig-text {
   font-size: 30px;
 }
 
-/* line 74, scss/components/_typography.scss */
+/* line 77, scss/components/_typography.scss */
 .large-text, .page-title, h1 {
   font-size: 30px;
 }
 
-/* line 77, scss/components/_typography.scss */
+/* line 80, scss/components/_typography.scss */
 ul {
   list-style-type: disc;
 }
 
-/* line 80, scss/components/_typography.scss */
+/* line 83, scss/components/_typography.scss */
 ul, ol {
   padding: 0;
   padding-left: 20px;
   margin: 25px 0;
 }
-/* line 84, scss/components/_typography.scss */
+/* line 87, scss/components/_typography.scss */
 ul li, ol li {
   margin: 10px 0;
 }
-/* line 87, scss/components/_typography.scss */
+/* line 90, scss/components/_typography.scss */
 ul.type-2 > li, ol.type-2 > li {
   margin: 20px 0;
 }
-/* line 90, scss/components/_typography.scss */
-ul.nostyle, .pagination, .collapsible ul.collapsible-body-content, .dropdown-list, .menu, .filter .filters-list, .carousel-nav, .tabs .tab-header-list, ol.nostyle {
+/* line 93, scss/components/_typography.scss */
+ul.nostyle, .pagination, .collapsible ul.collapsible-body-content, .dropdown-list, .menu, .left-block .dop-menu ul, .left-menu ul, .filter .filters-list, .carousel-nav, .tabs .tab-header-list, ol.nostyle {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 94, scss/components/_typography.scss */
-ul.nostyle > li, .pagination > li, .collapsible ul.collapsible-body-content > li, .dropdown-list > li, .menu > li, .filter .filters-list > li, .carousel-nav > li, .tabs .tab-header-list > li, ol.nostyle > li {
+/* line 97, scss/components/_typography.scss */
+ul.nostyle > li, .pagination > li, .collapsible ul.collapsible-body-content > li, .dropdown-list > li, .menu > li, .left-block .dop-menu ul > li, .left-menu ul > li, .filter .filters-list > li, .carousel-nav > li, .tabs .tab-header-list > li, ol.nostyle > li {
   padding: 0;
   margin: 0;
 }
-/* line 99, scss/components/_typography.scss */
+/* line 102, scss/components/_typography.scss */
 ul.horizontal > li, .horizontal-menu > li, .carousel-nav > li, .tabs .tab-header-list > li, ol.horizontal > li {
   display: inline-block;
 }
 
-/* line 103, scss/components/_typography.scss */
+/* line 106, scss/components/_typography.scss */
 dl {
   margin: 25px 0;
   padding: 0;
 }
-/* line 106, scss/components/_typography.scss */
+/* line 109, scss/components/_typography.scss */
 dl dt, dl dd {
   padding: 0;
   margin: 0;
 }
-/* line 110, scss/components/_typography.scss */
+/* line 113, scss/components/_typography.scss */
 dl.params-list {
   padding-left: 10px;
   border-left: 2px solid #939393;
   font-size: 13px;
 }
-/* line 114, scss/components/_typography.scss */
+/* line 117, scss/components/_typography.scss */
 dl.params-list dt, dl.params-list dd {
   display: inline-block;
 }
-/* line 117, scss/components/_typography.scss */
+/* line 120, scss/components/_typography.scss */
 dl.params-list dt {
   color: #939393;
   margin: 0.5rem 0;
 }
-/* line 120, scss/components/_typography.scss */
+/* line 123, scss/components/_typography.scss */
 dl.params-list dt:first-of-type {
   margin-top: 0;
 }
-/* line 123, scss/components/_typography.scss */
+/* line 126, scss/components/_typography.scss */
 dl.params-list dt:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 130, scss/components/_typography.scss */
+/* line 132, scss/components/_typography.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 135, scss/components/_typography.scss */
 a, .btn-link {
   color: #c337a2;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
-/* line 137, scss/components/_typography.scss */
+/* line 142, scss/components/_typography.scss */
 a.nostyle, .nostyle.btn-link, .menu .menu-link,
 .menu .submenu-link, .breadcrumbs .brdcmb-link, .product-card .product-name a, .product-card .product-name .btn-link {
   color: inherit;
 }
-/* line 140, scss/components/_typography.scss */
+/* line 145, scss/components/_typography.scss */
 a.img-link, .img-link.btn-link {
   display: block;
   border: 0;
 }
-/* line 143, scss/components/_typography.scss */
+/* line 148, scss/components/_typography.scss */
 a.img-link img, .img-link.btn-link img {
   display: block;
 }
-/* line 147, scss/components/_typography.scss */
+/* line 152, scss/components/_typography.scss */
 [class*="title"] a, [class*="title"] .btn-link {
   color: inherit;
 }
 
-/* line 153, scss/components/_typography.scss */
+/* line 158, scss/components/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.5;
 }
-/* line 156, scss/components/_typography.scss */
+/* line 161, scss/components/_typography.scss */
 h1 a, h1 .btn-link, h2 a, h2 .btn-link, h3 a, h3 .btn-link, h4 a, h4 .btn-link, h5 a, h5 .btn-link, h6 a, h6 .btn-link {
   color: inherit;
 }
 
-/* line 162, scss/components/_typography.scss */
+/* line 167, scss/components/_typography.scss */
 h1 a, h1 .btn-link, h2 a, h2 .btn-link, h3 a, h3 .btn-link, h4 a, h4 .btn-link, h5 a, h5 .btn-link, h6 a, h6 .btn-link {
   font-weight: inherit;
 }
 
-/* line 165, scss/components/_typography.scss */
+/* line 170, scss/components/_typography.scss */
 h3 {
   font-size: 2.92rem;
   line-height: 1.5;
   margin: 1em 0;
 }
 
-/* line 166, scss/components/_typography.scss */
+/* line 171, scss/components/_typography.scss */
 h4 {
   font-size: 1.5rem;
   line-height: 1.5;
   margin: 1em 0;
 }
 
-/* line 167, scss/components/_typography.scss */
+/* line 172, scss/components/_typography.scss */
 h5 {
   font-size: 1.313rem;
   line-height: 1.5;
   margin: 1em 0;
 }
 
-/* line 168, scss/components/_typography.scss */
+/* line 173, scss/components/_typography.scss */
 h6 {
   font-size: 1.125rem;
   line-height: 1.5;
   margin: 1em 0;
 }
 
-/* line 170, scss/components/_typography.scss */
+/* line 175, scss/components/_typography.scss */
 .page-title, h1 {
   margin: 0.5em 0 1em;
 }
-/* line 175, scss/components/_typography.scss */
+/* line 180, scss/components/_typography.scss */
 .page-title + .archive-box, h1 + .archive-box {
   margin: 30px 0;
   line-height: 51px;
   vertical-align: middle;
 }
 
-/* line 181, scss/components/_typography.scss */
+/* line 186, scss/components/_typography.scss */
 .page-title-link {
   margin-top: 30px;
 }
 
-/* line 184, scss/components/_typography.scss */
+/* line 189, scss/components/_typography.scss */
 .page-img {
   margin: 20px auto;
 }
 
-/* line 187, scss/components/_typography.scss */
+/* line 192, scss/components/_typography.scss */
 .page-text {
   margin-bottom: 150px;
 }
 
-/* line 190, scss/components/_typography.scss */
+/* line 195, scss/components/_typography.scss */
 .breadcrumbs + .workarea .page-title {
   margin: 10px 0 15px;
 }
 
-/* line 193, scss/components/_typography.scss */
+/* line 198, scss/components/_typography.scss */
 .box-title {
   font-size: 28px;
   margin: 20px 0;
 }
 
-/* line 198, scss/components/_typography.scss */
+/* line 203, scss/components/_typography.scss */
 h2, .title-h2 {
   font-size: 20px;
   margin: 1em 0;
 }
-/* line 203, scss/components/_typography.scss */
+/* line 208, scss/components/_typography.scss */
 p + h2, p + .title-h2 {
   margin-top: 1.5em;
 }
 
-/* line 209, scss/components/_typography.scss */
+/* line 214, scss/components/_typography.scss */
 blockquote {
   margin: 35px 0;
   padding: 20px 0 20px 2rem;
   border-left: 1px solid #5e2670;
 }
 
-/* line 216, scss/components/_typography.scss */
+/* line 221, scss/components/_typography.scss */
 table {
   border-collapse: collapse;
 }
-/* line 218, scss/components/_typography.scss */
+/* line 223, scss/components/_typography.scss */
 table th {
   font-weight: normal;
   text-align: center;
 }
-/* line 222, scss/components/_typography.scss */
+/* line 227, scss/components/_typography.scss */
 table th, table td {
   padding: 1em 2em;
 }
-/* line 226, scss/components/_typography.scss */
+/* line 231, scss/components/_typography.scss */
 table.bordered th, table.bordered td {
   text-align: left;
   padding: 1em;
   border: 1px solid #e1e1e1;
 }
-/* line 230, scss/components/_typography.scss */
+/* line 235, scss/components/_typography.scss */
 table.bordered th:first-of-type, table.bordered td:first-of-type {
   border-left: 0;
   padding-left: 0;
 }
-/* line 234, scss/components/_typography.scss */
+/* line 239, scss/components/_typography.scss */
 table.bordered th:last-of-type, table.bordered td:last-of-type {
   border-right: 0;
   padding-left: 2.5em;
 }
-/* line 239, scss/components/_typography.scss */
+/* line 244, scss/components/_typography.scss */
 table.bordered th {
   border-top: 0;
 }
-/* line 242, scss/components/_typography.scss */
+/* line 247, scss/components/_typography.scss */
 table.bordered tr:last-of-type td {
   border-bottom: 0;
 }
@@ -4237,55 +4296,69 @@ select option {
 }
 /* line 7, scss/components/_collapsible.scss */
 .collapsible .collapsible-body-content {
-  padding: 1px 20px 10px;
-}
-/* line 10, scss/components/_collapsible.scss */
-.collapsible .collapsible-body-content > *:first-child {
-  margin-top: 0.5rem;
+  /*padding: 1px $gutter-width $gutter-width/2;*/
+  /*>*:first-child {
+  	margin-top: 0.5rem;
+  }*/
 }
 /* line 17, scss/components/_collapsible.scss */
 .collapsible.sidebar-menu > .menu-item > .menu-link,
 .collapsible .collapsible-header {
-  padding: 18px 20px 16px;
+  /*padding: $gutter-width*0.9 $gutter-width $gutter-width*0.8;*/
+  padding: 18px 15px 18px 10px;
   line-height: 1;
   cursor: pointer;
   min-height: 50px;
 }
-/* line 26, scss/components/_collapsible.scss */
+/* line 27, scss/components/_collapsible.scss */
 .collapsible .collapsible-header:after {
   content: '>';
   display: block;
   position: absolute;
-  right: 22px;
+  right: 15px;
   top: 18px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   color: color("icons", "base");
   -webkit-transform: scale(2, 1) rotate(90deg) translateZ(0);
           transform: scale(2, 1) rotate(90deg) translateZ(0);
   will-change: transform;
 }
-/* line 39, scss/components/_collapsible.scss */
+/* line 40, scss/components/_collapsible.scss */
 .collapsible .collapsible-header:not(.active):hover {
   background-color: color("bg", "light");
 }
 /* line 43, scss/components/_collapsible.scss */
+.collapsible .collapsible-header.active {
+  background: #c337a2;
+  color: #ffffff;
+}
+/* line 46, scss/components/_collapsible.scss */
 .collapsible .collapsible-header.active:after {
   -webkit-transform: scale(2, 1) rotate(-90deg) translateZ(0);
           transform: scale(2, 1) rotate(-90deg) translateZ(0);
 }
-/* line 51, scss/components/_collapsible.scss */
+/* line 55, scss/components/_collapsible.scss */
+.collapsible.level-2 .collapsible-header {
+  padding-left: 20px;
+}
+/* line 57, scss/components/_collapsible.scss */
+.collapsible.level-2 .collapsible-header.active {
+  background: #939393;
+  color: #ffffff;
+}
+/* line 63, scss/components/_collapsible.scss */
 .collapsible.type-2 {
   padding: 0;
 }
-/* line 53, scss/components/_collapsible.scss */
+/* line 65, scss/components/_collapsible.scss */
 .collapsible.type-2 .collapsible-header {
   font-size: 14px;
   padding: 0;
   line-height: 1.5;
   min-height: 0;
 }
-/* line 58, scss/components/_collapsible.scss */
+/* line 70, scss/components/_collapsible.scss */
 .collapsible.type-2 .collapsible-header:after {
   position: relative;
   top: auto;
@@ -4296,16 +4369,16 @@ select option {
   margin-left: 15px;
   color: #2b2b2b;
 }
-/* line 68, scss/components/_collapsible.scss */
+/* line 80, scss/components/_collapsible.scss */
 .collapsible.type-2 .collapsible-header:hover {
   background: none;
 }
-/* line 72, scss/components/_collapsible.scss */
+/* line 84, scss/components/_collapsible.scss */
 .collapsible.type-2 .collapsible-body-content {
   padding: 10px 0 0;
 }
 
-/* line 79, scss/components/_collapsible.scss */
+/* line 91, scss/components/_collapsible.scss */
 .base-card .collapsible-type-2:first-child li:first-child .collapsible-header, .balloon .collapsible-type-2:first-child li:first-child .collapsible-header, .modal .collapsible-type-2:first-child li:first-child .collapsible-header,
 .base-card .card-content .collapsible-type-2:first-child li:first-child .collapsible-header,
 .balloon .card-content .collapsible-type-2:first-child li:first-child .collapsible-header,
@@ -4753,53 +4826,78 @@ select option {
   color: #252525;
 }
 
+/* line 2, scss/components/_left-block.scss */
+.left-block {
+  background: white;
+  padding: 0
+  /*border-radius: $base-border-radius;*/
+}
+/* line 7, scss/components/_left-block.scss */
+.left-block .title {
+  color: #5e2670;
+  padding: 15px 0px;
+}
+/* line 11, scss/components/_left-block.scss */
+.left-block img {
+  margin-right: 10px;
+}
+/* line 17, scss/components/_left-block.scss */
+.left-block .dop-menu ul li {
+  padding: 15px 10px;
+}
+/* line 19, scss/components/_left-block.scss */
+.left-block .dop-menu ul li a, .left-block .dop-menu ul li .btn-link {
+  color: #202020;
+}
+
+/* line 2, scss/components/_left-menu.scss */
+.left-menu {
+  background: white;
+  padding: 0;
+  max-width: 260px;
+}
+/* line 6, scss/components/_left-menu.scss */
+.left-menu .title {
+  padding: 20px 10px;
+}
+/* line 11, scss/components/_left-menu.scss */
+.left-menu ul li {
+  border-bottom: 1px solid #eeeeee;
+}
+/* line 15, scss/components/_left-menu.scss */
+.left-menu ul.level-3 li {
+  border-bottom: 0px;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #202020;
+}
+/* line 22, scss/components/_left-menu.scss */
+.left-menu ul.level-3 li a, .left-menu ul.level-3 li .btn-link {
+  color: #202020;
+}
+/* line 24, scss/components/_left-menu.scss */
+.left-menu ul.level-3 li a:hover, .left-menu ul.level-3 li .btn-link:hover {
+  color: #c337a2;
+}
+
 /* line 2, scss/components/_filters.scss */
 .filter {
   background: white;
-  border-radius: 6px;
   max-width: 260px;
 }
-/* line 9, scss/components/_filters.scss */
-.filter .filters-list li {
-  border-bottom: 1px solid #eeeeee;
+/* line 5, scss/components/_filters.scss */
+.filter .filters-list {
+  padding: 10px;
 }
-/* line 13, scss/components/_filters.scss */
+/* line 12, scss/components/_filters.scss */
 .filter .range-field {
-  margin: 1rem 0;
+  margin: 5px 0;
 }
-/* line 16, scss/components/_filters.scss */
-.filter .price {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-/* line 20, scss/components/_filters.scss */
-.filter .price .lbl-text {
-  position: absolute;
-  top: 9px;
-  left: 10px;
-  line-height: 1;
-}
-/* line 26, scss/components/_filters.scss */
-.filter .price .textfield-placeholder {
-  left: 30px;
-}
-/* line 29, scss/components/_filters.scss */
-.filter .price .inputtext-small {
-  padding-left: 30px;
-}
-/* line 33, scss/components/_filters.scss */
-.filter .actions {
-  padding: 30px 20px;
+/* line 15, scss/components/_filters.scss */
+.filter a, .filter .btn-link {
+  color: #202020;
 }
 
 /* line 1, scss/components/_product-card.scss */
@@ -4840,34 +4938,55 @@ select option {
 .product-card .product-info {
   padding: 1em 1.2em 10px;
 }
-/* line 34, scss/components/_product-card.scss */
+/* line 33, scss/components/_product-card.scss */
+.product-card.hit:after, .product-card.new:after, .product-card.sale:after {
+  content: '';
+  width: 41px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  background: url("images/label/sprite-label.png") no-repeat;
+}
+/* line 43, scss/components/_product-card.scss */
+.product-card.new:after {
+  background-position: 0px -40px;
+}
+/* line 46, scss/components/_product-card.scss */
+.product-card.hit:after {
+  background-position: 0px 0px;
+}
+/* line 49, scss/components/_product-card.scss */
+.product-card.sale:after {
+  background-position: 0px -20px;
+}
+/* line 53, scss/components/_product-card.scss */
 .product-card .product-name {
   line-height: 20px;
 }
-/* line 40, scss/components/_product-card.scss */
+/* line 59, scss/components/_product-card.scss */
 .product-card .product-actions {
   position: absolute;
   bottom: 10px;
   right: 0;
 }
-/* line 44, scss/components/_product-card.scss */
+/* line 63, scss/components/_product-card.scss */
 .product-card .product-actions .btn-add-to-cart {
   -webkit-transition: -webkit-transform .3s ease;
           transition: transform .3s ease;
 }
-/* line 48, scss/components/_product-card.scss */
+/* line 67, scss/components/_product-card.scss */
 .product-card .product-actions.active .btn-add-to-cart {
   -webkit-transform: translateX(-10px);
       -ms-transform: translateX(-10px);
           transform: translateX(-10px);
 }
-/* line 52, scss/components/_product-card.scss */
+/* line 71, scss/components/_product-card.scss */
 .product-card .product-actions.added .btn-add-to-cart {
   background: #5e2670;
   border-color: #5e2670;
 }
 
-/* line 58, scss/components/_product-card.scss */
+/* line 77, scss/components/_product-card.scss */
 .clone-img {
   position: absolute;
   width: 220px;
@@ -5099,25 +5218,117 @@ select option {
   background: white;
 }
 
+/* line 111, scss/components/_carousel.scss */
+.product-page .items {
+  margin-top: 20px;
+}
+/* line 113, scss/components/_carousel.scss */
+.product-page .items .carousel-prev,
+.product-page .items .carousel-next {
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+}
+/* line 118, scss/components/_carousel.scss */
+.product-page .items .carousel-prev .icon,
+.product-page .items .carousel-next .icon {
+  fill: #202020;
+  -webkit-transition: fill .3s ease;
+          transition: fill .3s ease;
+}
+/* line 122, scss/components/_carousel.scss */
+.product-page .items .carousel-prev:hover .icon,
+.product-page .items .carousel-next:hover .icon {
+  fill: #828282;
+}
+/* line 126, scss/components/_carousel.scss */
+.product-page .items .carousel-prev {
+  left: 25px;
+}
+/* line 129, scss/components/_carousel.scss */
+.product-page .items .carousel-next {
+  right: 25px;
+}
+/* line 132, scss/components/_carousel.scss */
+.product-page .items .carousel {
+  margin: 0 60px;
+}
+/* line 134, scss/components/_carousel.scss */
+.product-page .items .carousel a.item, .product-page .items .carousel .item.btn-link {
+  text-align: -webkit-center;
+}
+
+/* line 141, scss/components/_carousel.scss */
+.relative-products .carousel-controlls {
+  position: inherit;
+}
+/* line 144, scss/components/_carousel.scss */
+.relative-products .carousel-prev,
+.relative-products .carousel-next {
+  margin-top: -8px;
+  width: 26px;
+  height: 26px;
+  background: rgba(0, 0, 0, 0.33);
+  border-radius: 16px;
+  top: 25%;
+  padding: 5px;
+  top: -220px;
+}
+/* line 156, scss/components/_carousel.scss */
+.relative-products .carousel-prev {
+  left: 15px;
+}
+/* line 159, scss/components/_carousel.scss */
+.relative-products .carousel-next {
+  right: 15px;
+}
+
 /* line 3, scss/components/_product.scss */
 .product-page .product-title {
   margin: 0;
 }
-/* line 6, scss/components/_product.scss */
+/* line 5, scss/components/_product.scss */
+.product-page .product-title:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  display: inline-block;
+  margin-left: 10px;
+  background: url("images/label/sprite-label.png") no-repeat;
+}
+/* line 13, scss/components/_product.scss */
+.product-page .product-title.new:after {
+  background-position: 0px -40px;
+  width: 41px;
+  height: 20px;
+}
+/* line 18, scss/components/_product.scss */
+.product-page .product-title.hit:after {
+  background-position: 0px 0px;
+  width: 41px;
+  height: 20px;
+}
+/* line 23, scss/components/_product.scss */
+.product-page .product-title.sale:after {
+  background-position: 0px -20px;
+  width: 41px;
+  height: 20px;
+}
+/* line 29, scss/components/_product.scss */
 .product-page .articul {
   margin: 0 0 10px;
 }
-/* line 9, scss/components/_product.scss */
+/* line 32, scss/components/_product.scss */
 .product-page .product-imgs {
   margin-top: 10px;
 }
-/* line 12, scss/components/_product.scss */
+/* line 35, scss/components/_product.scss */
 .product-page .thumbs {
   width: 80px;
   height: 300px;
   margin-left: 30px;
 }
-/* line 16, scss/components/_product.scss */
+/* line 39, scss/components/_product.scss */
 .product-page .thumbs .item {
   width: 100%;
   height: 80px;
@@ -5125,26 +5336,38 @@ select option {
   border: 1px solid color("border", "light");
   margin-bottom: 10px;
 }
-/* line 22, scss/components/_product.scss */
+/* line 45, scss/components/_product.scss */
 .product-page .thumbs .item:hover, .product-page .thumbs .item.active {
   border: 1px solid color("primary", "base");
 }
-/* line 31, scss/components/_product.scss */
+/* line 52, scss/components/_product.scss */
+.product-page .full-img .zoom {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+/* line 59, scss/components/_product.scss */
+.product-page .full-img .zoom svg {
+  fill: #ffffff;
+}
+/* line 63, scss/components/_product.scss */
 .product-page .product-price-box {
   margin: 20px 0 25px;
 }
-/* line 33, scss/components/_product.scss */
+/* line 65, scss/components/_product.scss */
 .product-page .product-price-box .price {
   display: inline-block;
   margin-right: 20px;
 }
-/* line 37, scss/components/_product.scss */
+/* line 69, scss/components/_product.scss */
 .product-page .product-price-box .old-price {
   display: inline-block;
   font-size: 14px;
   margin-right: 3px;
 }
-/* line 41, scss/components/_product.scss */
+/* line 73, scss/components/_product.scss */
 .product-page .product-price-box .old-price:after {
   content: '';
   display: block;
@@ -5155,25 +5378,25 @@ select option {
   left: 0;
   top: 0.8em;
 }
-/* line 53, scss/components/_product.scss */
+/* line 85, scss/components/_product.scss */
 .product-page .action-box {
   background: #f2f2f2;
   padding: 30px;
   margin: 5px 0;
 }
-/* line 58, scss/components/_product.scss */
+/* line 90, scss/components/_product.scss */
 .product-page .product-quantity-box {
   width: 120px;
 }
-/* line 61, scss/components/_product.scss */
+/* line 93, scss/components/_product.scss */
 .product-page .action-buttons {
   width: 180px;
 }
-/* line 63, scss/components/_product.scss */
+/* line 95, scss/components/_product.scss */
 .product-page .action-buttons .btn + .btn {
   margin-top: 20px;
 }
-/* line 67, scss/components/_product.scss */
+/* line 99, scss/components/_product.scss */
 .product-page .product-desc {
   margin: 25px 0 35px;
 }
@@ -5409,61 +5632,60 @@ select option {
 .modal.one-click-form-box {
   top: 235px;
   left: 50%;
-  width: 500px;
+  width: 580px;
   max-width: 100%;
   margin-left: -250px;
   padding: 40px;
 }
 /* line 30, scss/components/_modal.scss */
 .modal.one-click-form-box .title {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 30px;
 }
-/* line 35, scss/components/_modal.scss */
+/* line 36, scss/components/_modal.scss */
 .modal.one-click-form-box .note-text {
   margin-bottom: 20px;
 }
-/* line 38, scss/components/_modal.scss */
+/* line 39, scss/components/_modal.scss */
 .modal.one-click-form-box .table-field {
-  margin: 10px 0 25px;
+  margin: 10px 0 25px
+  /*.field {
+  	width: 73%;
+  	width: calc(76% - 10px);
+  }*/
 }
-/* line 40, scss/components/_modal.scss */
+/* line 41, scss/components/_modal.scss */
 .modal.one-click-form-box .table-field .label {
   width: 24%;
 }
-/* line 44, scss/components/_modal.scss */
-.modal.one-click-form-box .table-field .field {
-  width: 73%;
-  width: calc(76% - 10px);
-}
-/* line 49, scss/components/_modal.scss */
+/* line 50, scss/components/_modal.scss */
 .modal.one-click-form-box .table-field.time-field {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin-top: 30px;
 }
-/* line 52, scss/components/_modal.scss */
+/* line 53, scss/components/_modal.scss */
 .modal.one-click-form-box .table-field.time-field .label {
   width: 100%;
   display: block;
   font-size: 1em;
   margin-bottom: 1em;
 }
-/* line 58, scss/components/_modal.scss */
+/* line 59, scss/components/_modal.scss */
 .modal.one-click-form-box .table-field.time-field .first-field {
   width: 44%;
 }
-/* line 61, scss/components/_modal.scss */
+/* line 62, scss/components/_modal.scss */
 .modal.one-click-form-box .table-field.time-field .field {
   width: 53%;
 }
 
-/* line 69, scss/components/_modal.scss */
+/* line 70, scss/components/_modal.scss */
 .modal.notification {
   padding: 40px;
 }
-/* line 71, scss/components/_modal.scss */
+/* line 72, scss/components/_modal.scss */
 .modal.notification.compare-full {
   top: 100px;
   left: 50%;
@@ -5472,7 +5694,7 @@ select option {
   margin-left: -177px;
 }
 
-/* line 79, scss/components/_modal.scss */
+/* line 80, scss/components/_modal.scss */
 .modal.geo-modal {
   width: 500px;
   min-height: 490px;
@@ -5481,10 +5703,45 @@ select option {
   margin-left: -250px;
   padding: 40px;
 }
-/* line 86, scss/components/_modal.scss */
+/* line 87, scss/components/_modal.scss */
 .modal.geo-modal .title {
   font-size: 24px;
   margin: 0 0 80px;
+}
+
+/* line 93, scss/components/_modal.scss */
+.modal-content {
+  background: #ffffff;
+  padding: 50px 80px;
+  width: 500px;
+}
+/* line 97, scss/components/_modal.scss */
+.modal-content input[type="text"],
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+}
+/* line 102, scss/components/_modal.scss */
+.modal-content .btn {
+  line-height: 0px;
+}
+
+/* line 107, scss/components/_modal.scss */
+.modal .btn-close {
+  top: 50px;
+  right: 50px;
+  z-index: 1;
+  padding: 0;
+}
+/* line 112, scss/components/_modal.scss */
+.modal .btn-close svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* line 118, scss/components/_modal.scss */
+.btn-close svg {
+  fill: #949494;
 }
 
 /* line 1, scss/components/_social.scss */
@@ -5516,4 +5773,174 @@ select option {
 /* line 19, scss/components/_social.scss */
 .soc-link:hover {
   border-color: #7f807d;
+}
+
+/* line 2, scss/components/_contacts.scss */
+.maps.contacts {
+  width: 940px;
+  height: 490px;
+}
+/* line 5, scss/components/_contacts.scss */
+.maps.contacts .map {
+  width: 940px;
+  height: 490px;
+}
+/* line 9, scss/components/_contacts.scss */
+.maps.contacts .contact {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  z-index: 2;
+  padding: 35px 20px;
+  color: #ffffff;
+}
+/* line 19, scss/components/_contacts.scss */
+.maps.contacts .contact .field {
+  font-size: 13px;
+}
+/* line 22, scss/components/_contacts.scss */
+.maps.contacts .contact .title {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+/* line 26, scss/components/_contacts.scss */
+.maps.contacts .contact .btn {
+  width: 180px;
+}
+/* line 29, scss/components/_contacts.scss */
+.maps.contacts .contact .field {
+  padding-left: 30px;
+}
+/* line 31, scss/components/_contacts.scss */
+.maps.contacts .contact .field.phone {
+  background: url("images/svg-icons/phone.svg") no-repeat;
+  background-size: 20px;
+}
+/* line 35, scss/components/_contacts.scss */
+.maps.contacts .contact .field.email {
+  background: url("images/svg-icons/email.svg") no-repeat;
+  background-size: 20px;
+}
+/* line 39, scss/components/_contacts.scss */
+.maps.contacts .contact .field.skype {
+  background: url("images/svg-icons/skype.svg") no-repeat;
+  background-size: 20px;
+}
+/* line 43, scss/components/_contacts.scss */
+.maps.contacts .contact .field.address {
+  background: url("images/svg-icons/geo-violet.svg") no-repeat;
+  background-size: 20px;
+}
+/* line 49, scss/components/_contacts.scss */
+.maps.contacts .contact .dop-information div {
+  margin-bottom: 20px;
+}
+/* line 52, scss/components/_contacts.scss */
+.maps.contacts .contact .dop-information.show {
+  -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+  -webkit-transition: -webkit-transform .6s ease 0s;
+  transition: transform .6s ease 0s;
+}
+
+/* line 3, scss/components/_delivery.scss */
+.delivery-pay .pl-60 {
+  padding-left: 60px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  min-height: 45px;
+}
+/* line 10, scss/components/_delivery.scss */
+.delivery-pay .delivery [class*="item-"] {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 20px 0;
+}
+/* line 14, scss/components/_delivery.scss */
+.delivery-pay .delivery .item-1 {
+  padding-top: 0;
+}
+/* line 20, scss/components/_delivery.scss */
+.delivery-pay .images:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background: url("images/delivery/sprite.png") no-repeat;
+  background-size: 45px;
+}
+/* line 31, scss/components/_delivery.scss */
+.delivery-pay .images.free:after {
+  background-position: 0px 0px;
+}
+/* line 34, scss/components/_delivery.scss */
+.delivery-pay .images.car:after {
+  background-position: 0px -45px;
+}
+/* line 37, scss/components/_delivery.scss */
+.delivery-pay .images.money:after {
+  background-position: 0px -90px;
+}
+/* line 40, scss/components/_delivery.scss */
+.delivery-pay .images.hand:after {
+  background-position: 0px -135px;
+}
+/* line 43, scss/components/_delivery.scss */
+.delivery-pay .images.robo:after {
+  background-position: 0px -180px;
+}
+/* line 46, scss/components/_delivery.scss */
+.delivery-pay .images.bank:after {
+  background-position: 0px -225px;
+}
+/* line 49, scss/components/_delivery.scss */
+.delivery-pay .images.ur:after {
+  background-position: 0px -270px;
+}
+
+/*
+	╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╣╤В╨╡ ╨▓ HTML ╨║╨╛╨┤╨╡ ╨╜╤Г╨╢╨╜╤Г╤О ╨▓╨░╨╝ ╨▒╤Г╨║╨▓╤Г, ╨┤╨╗╤П ╨┐╤А╨╡╨╛╨▒╤А╨░╨╖╨╛╨▓╨░╨╜╨╕╤П ╨╡╨╡ ╨▓ ╨╖╨╜╨░╨║ ╤А╤Г╨▒╨╗╤П ╨┐╨╛╨┤╤Е╨╛╨┤╤П╤Й╨╡╨│╨╛ ╤Б╨╡╨╝╨╡╨╣╤Б╤В╨▓╨░ ╤И╤А╨╕╤Д╤В╨╛╨▓:
+	<span class="ruble">q</span>
+	╨С╤Г╨║╨▓╤Л ╤Б╨╛╨╛╤В╨▓╨╡╤В╤Б╤В╨▓╤Г╤О╤Й╨╕╨╡ ╤И╤А╨╕╤Д╤В╨░╨╝, ╨▓ ╤Б╤В╨╕╨╗╨╡ ╨║╨╛╤В╨╛╤А╤Л╤Е ╨╜╨░╤А╨╕╤Б╨╛╨▓╨░╨╜╤Л ╨╖╨╜╨░╨║╨╕ ╤А╤Г╨▒╨╗╤П:
+	a тАФ Arial Regular
+	b тАФ Arial Italic
+	c тАФ Arial Bold
+	d тАФ Arial Bold Italic
+
+	e тАФ Georgia Regular
+	f тАФ Georgia Italic
+	g тАФ Georgia Bold
+	h тАФ Georgia Bold Italic
+
+	i тАФ Tahoma Regular
+	j тАФ Tahoma Bold
+
+	k тАФ Times Regular
+	l тАФ Times Italic
+	m тАФ Times Bold
+	n тАФ Times Bold Italic
+
+	o тАФ Lucida Sans
+
+	p тАФ Verdana Regular
+	q тАФ Verdana Italic
+	r тАФ Verdana Bold
+	s тАФ Verdana Bold Italic
+*/
+@font-face {
+  font-family: ALSRubl;
+  src: url("fonts/rouble/rouble..eot");
+  src: url("fonts/rouble/rouble..eot?#iefix") format("embedded-opentype"), url("fonts/rouble/rouble.woff") format("woff"), url("fonts/rouble/rouble.ttf)") format("truetype"), url("fonts/rouble/rouble..svg#cambria") format("svg");
+}
+/* line 39, scss/components/_ruble.scss */
+.ruble {
+  font-family: ALSRubl;
 }

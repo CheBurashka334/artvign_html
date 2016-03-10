@@ -1,0 +1,25 @@
+//left-block
+.left-block {
+	background: white;
+	@extend .z-depth-1;
+	padding: 0;
+	/*border-radius: $base-border-radius;*/
+	.title{
+		color:$violet;
+		padding: 15px 0px;
+	}
+	img{
+		margin-right:10px;
+	}
+	.dop-menu{
+		ul {
+			@extend ul.nostyle;
+			li{
+				padding: 15px 10px;
+				a{
+					color: #202020;
+				}
+			}
+		}
+	}
+} 

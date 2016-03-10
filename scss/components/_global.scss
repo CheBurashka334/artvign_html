@@ -371,7 +371,7 @@ table {
 
 .icons-block {
 	margin-top:  $gutter-width;
-	margin-bottom: $gutter-width*6;
+	/*margin-bottom: $gutter-width*6;*/
 	.block-item {
 		flex-direction: column;
 	}
@@ -478,4 +478,28 @@ table {
 .no-h-padding {
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
+}
+
+.dirty-snow{
+	background-color: #fafafa;
+	padding: 40px 0;
+	.grid-address{
+		.text{
+			margin-bottom: 50px;
+		}
+		.title-h2{
+			margin: 0;
+		}
+		.address{
+			padding-left:20px;
+			color: #e233a6;
+			background: url('images/svg-icons/geo.svg') no-repeat;
+			background-size: 16px 25px;
+		}
+		.time{
+			padding-left:30px;
+			background: url('images/svg-icons/time.svg') no-repeat;
+			background-size: 20px;
+		}
+	}
 }

@@ -1,0 +1,31 @@
+//left-menu
+.left-menu {
+	background: white;
+	padding: 0;
+	max-width: 260px;
+	.title{
+		padding: 20px 10px;
+	}
+	ul {
+		@extend ul.nostyle;
+		li {
+			border-bottom: 1px solid #eeeeee;
+		}
+		&.level-3{
+			li{
+				border-bottom: 0px;
+			    padding: 10px;
+			    padding-left: 30px;
+			    font-size: 13px;
+			    line-height: 18px;
+			    color: #202020;
+			    a{
+			   		color: #202020;
+			   		&:hover{
+			   			color: $pink;
+			   		}
+			    }
+			}
+		}
+	}
+} 

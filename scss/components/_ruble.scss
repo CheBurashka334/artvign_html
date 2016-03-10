@@ -1,0 +1,41 @@
+//ruble
+/*
+	Используйте в HTML коде нужную вам букву, для преобразования ее в знак рубля подходящего семейства шрифтов:
+	<span class="ruble">q</span>
+	Буквы соответствующие шрифтам, в стиле которых нарисованы знаки рубля:
+	a — Arial Regular
+	b — Arial Italic
+	c — Arial Bold
+	d — Arial Bold Italic
+
+	e — Georgia Regular
+	f — Georgia Italic
+	g — Georgia Bold
+	h — Georgia Bold Italic
+
+	i — Tahoma Regular
+	j — Tahoma Bold
+
+	k — Times Regular
+	l — Times Italic
+	m — Times Bold
+	n — Times Bold Italic
+
+	o — Lucida Sans
+
+	p — Verdana Regular
+	q — Verdana Italic
+	r — Verdana Bold
+	s — Verdana Bold Italic
+*/
+@font-face {
+	font-family: ALSRubl;
+	src: url('fonts/rouble/rouble..eot');
+    src: url('fonts/rouble/rouble..eot?#iefix') format("embedded-opentype"),
+         url('fonts/rouble/rouble.woff') format("woff"),
+         url('fonts/rouble/rouble.ttf)') format("truetype"),
+         url('fonts/rouble/rouble..svg#cambria') format("svg");
+}
+.ruble{
+	font-family: ALSRubl;
+}

@@ -23,14 +23,15 @@
 .modal.one-click-form-box {
 	top: 235px;
 	left: 50%;
-	width: 500px;
+	width: 580px;
 	max-width: 100%;
 	margin-left: -250px;
 	padding: $gutter-width*2;
 	.title {
-		font-size: 24px;
+		font-size: 30px;
 		margin-bottom: $gutter-width*1.5;
-		@extend .light;
+		@extend .bold;
+		@extend .cond;
 	}
 	.note-text {
 		margin-bottom: $gutter-width;
@@ -41,10 +42,10 @@
 			@extend .medium-text;
 			width: 24%;
 		}
-		.field {
+		/*.field {
 			width: 73%;
 			width: calc(76% - 10px);
-		}
+		}*/
 	}
 	.table-field.time-field {
 		flex-wrap: wrap;
@@ -88,4 +89,32 @@
 		font-size: 24px;
 		margin: 0 0 $gutter-width*4;
 	}
+}
+.modal-content{
+	background: #ffffff;
+	padding: 50px 80px;
+	width: 500px;
+	input[type="text"],
+	select,
+	textarea{
+		width: 100%;
+	}
+	.btn{
+		line-height: 0px;
+	}
+}
+.modal{
+	 .btn-close{
+	    top: 50px;
+		right: 50px;
+		z-index: 1;
+		padding: 0;
+		svg{
+			width: 17px;
+			height: 17px;
+		}
+	}
+}
+.btn-close svg{
+	fill: #949494;
 }

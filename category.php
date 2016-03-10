@@ -1,6 +1,13 @@
 <?php include('header.php');?>
 <div class="grid">
-	<div class="col-3"><?php include('filter.php');?></div>
+	<div class="col-3">
+		<div class="left-block">
+			<?php include('filter.php');?>
+			<?php include('left-menu.php');?>
+			<?php include('dop-menu.php');?>
+		</div>
+	</div>
+	
 	<div class="col">
 		<div class="breadcrumbs">
 			<a class="brdcmb-link" href="home.php">Главная</a> - 
@@ -12,7 +19,7 @@
 		<div class="page-title">Каталог</div>
 		<div class="catalog grid-3-equalHeight" ng-controller="productsCtrl">
 			<div class="col tile" ng-repeat="product in products">
-				<div class="card product-card">
+				<div class="card product-card {{product.label}}">
 					<a class="card-img grid-column-center-middle-noGutter" href="product__single.php">
 						<img class="product-img" ng-src="{{product.image}}"/>
 						<div ng-if="product.label" class="label label-{{product.label}}"></div>
@@ -21,8 +28,8 @@
 						<div class="card-title product-name"><a class="item-link center-align" href="product__single.php">{{product.name}}</a></div>
 						<div class="product-articul xsmall-text violet-color">{{product.articul}}</div>
 						<div class="grid-noGutter product-price-box">
-							<div class="product-optprice bold">{{product.optprice}} &#8381;</div>
-							<div class="product-price">{{product.price}} &#8381;<div class="xsmall-text note-text">розн. цена</div></div>
+							<div class="product-optprice bold">{{product.optprice}} <span class="ruble">c</span></div>
+							<div class="product-price">{{product.price}} <span class="ruble">a</span><div class="xsmall-text note-text">розн. цена</div></div>
 							<div class="product-actions">
 								<button class="btn js-add-to-cart btn-add-to-cart square primary"><svg class="icon"><use xlink:href="#cart"/></svg></button>
 								<div class="product-quantity-box">
